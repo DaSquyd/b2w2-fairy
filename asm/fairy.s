@@ -18,8 +18,6 @@
  *  the narcs that you edited from the tutorial
  *
  * save rom--should be all set.  fairy type becomes type 17.
- * from there:
- *  make struggle type 18 and that should be good to get it typeless (i believe it used to be type 17 to get the typeless advantage).
  */
 
 // initializations
@@ -610,6 +608,9 @@ type_effectiveness_table: // u8 [NUM_OF_TYPES][NUM_OF_TYPES] // [attack][defend]
 // code rewrites
 .orga 0xC312
 .byte NUM_OF_TYPES, 0x2A, 0x08, 0xDA
+
+.orga 0x107A6
+.byte NUM_OF_TYPES
 
 .orga 0x11226
 .byte NUM_OF_TYPES, 0x28, 0x02, 0xDB
